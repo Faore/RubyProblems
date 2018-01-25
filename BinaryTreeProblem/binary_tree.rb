@@ -1,9 +1,8 @@
+
 module BinaryTreeProblem
 
   # Class for holding the nodes of the binary tree, and associated functions.
   class BinaryTree
-
-    @root = nil
 
     attr_reader :root
 

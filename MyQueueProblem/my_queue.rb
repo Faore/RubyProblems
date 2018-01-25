@@ -1,9 +1,9 @@
 require_relative './stack'
 
 module MyQueueProblem
+
+  # Queue implementation using only 2 stacks.
   class MyQueue
-    @storage_stack
-    @helper_stack
 
     def initialize
       @storage_stack = Stack.new
@@ -13,15 +13,11 @@ module MyQueueProblem
     def push(x)
       # We need to get the new value to the bottom of the storage stack.
       # First move the entire storage stack into the helper stack.
-      until @storage_stack.empty?
-        @helper_stack.push @storage_stack.pop
-      end
+      @helper_stack.push @storage_stack.pop until @storage_stack.empty?
       # Now that the storage stack is empty. Put this at the bottom.
       @storage_stack.push x
       # Put everything in the helper stack back on top of the new item.
-      until @helper_stack.empty?
-        @storage_stack.push @helper_stack.pop
-      end
+      @storage_stack.push @helper_stack.pop until @helper_stack.empty?
     end
 
     def pop
