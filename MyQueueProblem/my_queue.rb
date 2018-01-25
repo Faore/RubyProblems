@@ -31,5 +31,9 @@ module MyQueueProblem
     def peek
       @storage_stack.peek
     end
+
+    def empty?
+      @storage_stack.empty?
+    end
   end
 end
