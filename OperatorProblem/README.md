@@ -13,8 +13,8 @@ up the chain such that the initial call receives a list of all the combinations 
 
 The `value_with_operators` method calculates the sum of any set of numbers and operators by using
 `merge_operators_with_numbers` to have an array with all the digits and operators in order. It iterates over this entire
-array. It keeps a buffer of digits and adds each digit consecutive digit it encounters to it. When it reaches an
-operator, or the end of the array the contents of the buffer is taken along with the previously seen operator to perform
+array. It keeps a buffer of digits and adds each consecutive digit it encounters to the buffer. When it reaches an
+operator, or the end of the array, the contents of the buffer is taken along with the previously seen operator to perform
 the operation on the sum. The operation and digit conversion are handled by the `do_operation` and `num_arr_to_int`
 methods.
 
