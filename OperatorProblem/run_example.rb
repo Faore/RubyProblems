@@ -1,6 +1,7 @@
 
 require_relative './operator_algorithms'
 
+# Recreate the problem and show the input and solution from the algorithm.
 module OperatorProblem
   numbers = [*1..9]
   target = 100
